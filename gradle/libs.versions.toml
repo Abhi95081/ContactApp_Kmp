@@ -15,8 +15,18 @@ composeMultiplatform = "1.8.2"
 junit = "4.13.2"
 kotlin = "2.0.0"
 kotlinx-coroutines = "1.10.2"
+room = "2.7.0-alpha01"
+sqlite = "2.5.0-SNAPSHOT"
+ksp = "1.9.23-1.0.19"
 
 [libraries]
+
+room-runtime={module = "androidx.room:room-runtime", version.ref = "room"}
+room-runtime-android={module = "androidx.room:room-runtime-android", version.ref = "room"}
+room-compiler={module = "androidx.room:room-compiler", version.ref = "room"}
+room-gradle={module = "androidx.room:room-gradle-plugin", version.ref = "room"}
+sqlite-bundled={module = "androidx.sqlite:sqlite-bundled", version.ref = "sqlite"}
+
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-testJunit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
 junit = { module = "junit:junit", version.ref = "junit" }
@@ -37,3 +47,5 @@ composeHotReload = { id = "org.jetbrains.compose.hot-reload", version.ref = "com
 composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
 composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+ksp = {id = "com.google.devtools.ksp", version.ref = "ksp"}
+room = {id = "androidx.room", version.ref = "room"}
