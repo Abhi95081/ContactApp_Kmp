@@ -8,6 +8,8 @@ plugins {
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.composeHotReload)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.room)
 }
 
 kotlin {
@@ -18,16 +20,16 @@ kotlin {
         }
     }
 
-    listOf(
-        iosX64(),
-        iosArm64(),
-        iosSimulatorArm64()
-    ).forEach { iosTarget ->
-        iosTarget.binaries.framework {
-            baseName = "ComposeApp"
-            isStatic = true
-        }
-    }
+//    listOf(
+//        iosX64(),
+//        iosArm64(),
+//        iosSimulatorArm64()
+//    ).forEach { iosTarget ->
+//        iosTarget.binaries.framework {
+//            baseName = "ComposeApp"
+//            isStatic = true
+//        }
+//    }
 
     jvm("desktop")
 
@@ -47,9 +49,10 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtimeCompose)
-            implementation("androidx.room:room-gradle-plugin:2.7.0")
-            implementation("androidx.room:room-runtime :2.7.0")
-            implementation("androidx.sqlite:sqlite-bundled:2.7.0")
+            implementation(libs.room.runtime)
+            implementation(libs.room.compiler)
+            implementation(libs.sqlite.bundled)
+
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -103,4 +106,11 @@ compose.desktop {
             packageVersion = "1.0.0"
         }
     }
+}
+
+room{
+    schemaDirectory("$projectDir/schemas")
+}
+dependencies{
+    ksp(libs.room.compiler)
 }
