@@ -1,14 +1,47 @@
-This is a Kotlin Multiplatform project targeting Android, iOS, Desktop.
+# 🚀 Kotlin Multiplatform App with Compose
 
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - `commonMain` is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    `iosMain` would be the right folder for such calls.
-
-* `/iosApp` contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform, 
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+A Kotlin Multiplatform project targeting **Android**, **iOS**, and **Desktop**, built using **JetBrains Compose Multiplatform**.
 
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+---
+
+## 💡 Key Features
+
+- ✅ Shared UI using [JetBrains Compose Multiplatform](https://www.jetbrains.com/lp/compose-multiplatform/)
+- 📱 Native support for Android & iOS
+- 🖥️ Desktop support with native windowing
+- 🧪 Shared business logic using `commonMain`
+- 🔁 Platform-specific implementations via expect/actual or platform folders
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Kotlin 1.9+
+- Android Studio Giraffe or later
+- Xcode 14+ (for iOS development)
+- JDK 17+
+- CocoaPods (for iOS bridging)
+
+---
+
+
+#### Android
+
+## 📦 Technologies Used
+- Kotlin Multiplatform
+- Jetpack Compose Multiplatform
+- SwiftUI (iOS)
+- Android SDK
+- Compose for Desktop
+- Gradle
+
+## 📚 Learn More
+- Kotlin Multiplatform Docs
+- JetBrains Compose Multiplatform
+- Compose for iOS (alpha)
+
+## 🤝 Contribution
+- Feel free to open issues or submit PRs. Suggestions and contributions are always welcome!
