@@ -2,7 +2,6 @@
 
 A Kotlin Multiplatform project targeting **Android**, **iOS**, and **Desktop**, built using **JetBrains Compose Multiplatform**.
 
-
 ---
 
 ## 💡 Key Features
